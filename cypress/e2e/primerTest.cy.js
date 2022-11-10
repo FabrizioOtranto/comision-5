@@ -2,7 +2,7 @@ describe("Primer test", () =>{
 
     it("Deberia registrarse satisfactoriamente en la aplicacion", () =>{
         const numero = Math.floor(Math.random() * 1000)
-        cy.visit("https://pushing-front.vercel.app/");
+        cy.visit("");
         cy.get('#user').type("pushingit" + numero);
         cy.get('#user').clear();
         cy.get('#user').type("pushingit" + numero);
