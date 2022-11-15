@@ -41,6 +41,5 @@ describe("Selectores", () => {
         cy.visit('')
         cy.contains("register", {matchCase:false}) //sin respetar mayusuclas
         cy.contains("Register") // respetando mayusuclas
-
     })
 })
