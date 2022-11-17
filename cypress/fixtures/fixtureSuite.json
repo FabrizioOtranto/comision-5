@@ -1,0 +1,22 @@
+{
+    "test1": {
+        "usuario": {
+            "username": "pushingit1",
+            "contraseña": "123456!"
+        },
+        "tareas": {
+            "tarea1": "Tarea 1",
+            "tarea2": "Tarea 2"
+        }
+    },
+    "test2": {
+        "usuario": {
+            "username": "pushingIt2",
+            "contraseña": "123456!"
+        },
+        "tareas": {
+            "tarea1": "Tarea 1",
+            "tarea2": "Tarea 2"
+        }
+    }
+}
