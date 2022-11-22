@@ -2,7 +2,7 @@ describe("Selectores", () => {
 
     it.skip("Deberia encontrar los elementos utilizando cssSelectors", () => {
         cy.visit('')
-        cy.get('button') // por tagname
+        cy.get('button')// por tagname
         cy.get('[name="user"]') // por atributo
         cy.get('#user') //por id
         cy.get('input#user') //agregamos el tagname

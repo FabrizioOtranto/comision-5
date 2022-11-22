@@ -4,7 +4,6 @@ describe('Fixture', () => {
     let loginData;
 
     before('Before', () => {
-
         cy.fixture("fixtureSuite").then(data => {
             loginData = data
         });
