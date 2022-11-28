@@ -11,7 +11,7 @@
     },
     "test2": {
         "usuario": {
-            "username": "pushingIt2",
+            "username": "pushingIt",
             "contraseña": "123456!"
         },
         "tareas": {

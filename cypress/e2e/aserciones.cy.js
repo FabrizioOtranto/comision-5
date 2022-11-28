@@ -19,7 +19,7 @@ describe('Aserciones', () => {
     })
 
     it('Validar el titulo utilizando should BDD', () => {
-        cy.get('#title').should('have.text', 'Waits')
+        cy.get('#title').should('have.text', 'Wait')
     });
 
     it('Validar el titulo utilizando expect BDD', () => {

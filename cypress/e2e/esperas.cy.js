@@ -21,12 +21,12 @@ describe('Esperas', () => {
         cy.get('#wait').dblclick();
     });
 
-    it('Esperas con wait', () =>{
+    xit('Esperas con wait', () =>{
         cy.wait(14000)
         cy.get('#message').should('have.text', 'You have waited for ten seconds, CONGRATULATIONS');
     })
    
-    it('Esperas con timeouts', () =>{
+    xit('Esperas con timeouts', () =>{
         cy.get('#message', {timeout: contantes.TIMEOUT}).should('have.text', 'You have waited for ten seconds, CONGRATULATIONS'); 
     })
 

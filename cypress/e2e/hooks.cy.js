@@ -1,11 +1,10 @@
 /// <reference types="cypress" />
 
 describe('Hooks', () => {
-
+    let usuario1, contraseña
     before('Before', () => {
-        cy.fixture("loginData").then(data => {
-            cy.log(data);
-        });
+        usuario1 = "pushingit" 
+        contraseña = "123456!"
     });
 
     beforeEach("BeforeEach", () => {
