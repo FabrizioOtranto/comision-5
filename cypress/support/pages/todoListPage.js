@@ -1,6 +1,6 @@
 export class TodoListPage {
     constructor() {
-        this.taskInput = '#task';
+        this.Inputaskt = '#task';
         this.sendtaskButton = '#sendTask';
         this.completedButton = '#completed'
     };

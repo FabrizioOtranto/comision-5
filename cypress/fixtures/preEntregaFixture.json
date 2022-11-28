@@ -1,0 +1,18 @@
+{
+    "test": {
+        "usuario": {
+            "username": "pushingit",
+            "contraseña": "123456!"
+        },
+        "productos": {
+            "producto1": {
+                "name": "Black Jacket",
+                "precio": 25
+            },
+            "producto2": {
+                "name": "Red Cap",
+                "precio": 10
+            }
+        }
+    }
+}
