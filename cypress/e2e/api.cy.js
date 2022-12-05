@@ -1,13 +1,13 @@
 describe('API testing', () => {
 
-    it("hacer una consulta HTTP tipo GET", () => {
+    xit("hacer una consulta HTTP tipo GET", () => {
         cy.request('http://localhost:3000/posts/').then((respuesta) => {
             cy.log(respuesta)
             expect(respuesta.status).is.equal(200)
         })
     })
 
-    it("hacer una consulta HTTP tipo GET con destructuring", () => {
+    xit("hacer una consulta HTTP tipo GET con destructuring", () => {
         cy.request('http://localhost:3000/posts/').then(({ body, status }) => {
             cy.log(body);
             cy.log(status);
@@ -15,7 +15,7 @@ describe('API testing', () => {
         });
     });
 
-    it("hacer una consulta HTTP tipo GET agregando parametros", () => {
+    xit("hacer una consulta HTTP tipo GET agregando parametros", () => {
         cy.request({
             method: "GET",
             url: "http://localhost:3000/posts/",
@@ -29,7 +29,7 @@ describe('API testing', () => {
         })
     })
 
-    it("hacer una consulta HTTP tipo GET agregando parametros", () => {
+    xit("hacer una consulta HTTP tipo GET agregando parametros", () => {
         cy.request({
             method: "GET",
             url: "http://localhost:3000/posts/",
@@ -43,7 +43,7 @@ describe('API testing', () => {
         })
     })
 
-    it("hacer una consulta HTTP tipo GET ordenando", () => {
+    xit("hacer una consulta HTTP tipo GET ordenando", () => {
         cy.request({
             method: "GET",
             url: "http://localhost:3000/posts/",
@@ -56,7 +56,7 @@ describe('API testing', () => {
         })
     })
 
-    it("hacer una consulta HTTP tipo GET slices", () => {
+    xit("hacer una consulta HTTP tipo GET slices", () => {
         cy.request({
             method: "GET",
             url: "http://localhost:3000/posts/",
@@ -69,7 +69,7 @@ describe('API testing', () => {
         })
     })
 
-    it("hacer una consulta HTTP tipo GET rangos", () => {
+    xit("hacer una consulta HTTP tipo GET rangos", () => {
         cy.request({
             method: "GET",
             url: "http://localhost:3000/posts/",
@@ -82,7 +82,7 @@ describe('API testing', () => {
         })
     })
 
-    it("hacer una consulta HTTP tipo GET exlucyendo", () => {
+    xit("hacer una consulta HTTP tipo GET exlucyendo", () => {
         cy.request({
             method: "GET",
             url: "http://localhost:3000/posts/",
@@ -95,7 +95,7 @@ describe('API testing', () => {
         })
     })
 
-    it("hacer una consulta HTTP tipo POST", () => {
+    xit("hacer una consulta HTTP tipo POST", () => {
         const id = 18
         cy.request({
             method: "DELETE",
@@ -117,7 +117,7 @@ describe('API testing', () => {
         })
     })
 
-    it("hacer una consulta HTTP tipo PUT", () => {
+    xit("hacer una consulta HTTP tipo PUT", () => {
         cy.request({
             method: "PUT",
             url: "http://localhost:3000/posts/10",
@@ -131,7 +131,7 @@ describe('API testing', () => {
         })
     })
 
-    it('Deberia agragar, editar, eliminar y verificar que fue eliminado el documento', () => {
+    xit('Deberia agragar, editar, eliminar y verificar que fue eliminado el documento', () => {
         const id = 159
         const author = 'Pushing IT'
         const title = "title"
@@ -185,9 +185,9 @@ describe('API testing', () => {
         })
     });
 
-    it.only('Deberia iniciar sesion en pushingIT utilizando request', () => {
+    it('Deberia iniciar sesion en pushingIT utilizando request', () => {
         cy.request({
-            url: "https://pushing-it-backend.herokuapp.com/api/login",
+            url: "https://pushing-it.onrender.com/api/login",
             method: 'POST',
             body: {
                 username: 'pushingit',
