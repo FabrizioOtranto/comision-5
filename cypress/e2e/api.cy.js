@@ -187,7 +187,7 @@ describe('API testing', () => {
 
     it.only('Deberia iniciar sesion en pushingIT utilizando request', () => {
         cy.request({
-            url: "https://pushing-it-backend.herokuapp.com/api/login",
+            url: "https://pushing-it.onrender.com/api/login",
             method: 'POST',
             body: {
                 username: 'pushingit',

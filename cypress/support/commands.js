@@ -23,3 +23,24 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('esperaCirculoCarga', () => {
+    cy.get('[role="progressbar"]', { timeout: 30000 }).should('not.exist')
+});
+
+
+Cypress.Commands.add('loginConSesion', () => {
+    cy.session([], () => {
+        cy.request({
+            url: "https://pushing-it.onrender.com/api/login",
+            method: 'POST',
+            body: {
+                username: 'pushingit',
+                password: '123456!'
+            }
+        }).then(respuesta => {
+            window.localStorage.setItem('token', respuesta.body.token);
+            window.localStorage.setItem('user', respuesta.body.user.username);
+        })
+    })
+})

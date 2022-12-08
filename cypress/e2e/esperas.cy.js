@@ -30,7 +30,12 @@ describe('Esperas', () => {
         cy.get('#message', {timeout: contantes.TIMEOUT}).should('have.text', 'You have waited for ten seconds, CONGRATULATIONS'); 
     })
 
-    it('Esperas con timeouts segundo mensaje', () =>{
+    xit('Esperas con timeouts segundo mensaje', () =>{
         cy.get('#message', {timeout: contantes.TIMEOUT * 2}).should('have.text', 'You are a man of patience and have waited fifteen seconds'); 
+    })
+
+    it('Esperas con timeouts a traves de comandos', () =>{
+        cy.esperaCirculoCarga();
+        cy.get('#message').should('have.text', 'You have waited for ten seconds, CONGRATULATIONS'); 
     })
 });
