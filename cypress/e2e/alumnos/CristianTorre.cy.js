@@ -5,7 +5,7 @@ describe('Torre Critian Apis', () => {
     
     
     it('Registro ingreso y elimino usuario', () => {
-        const username ='usuariioejjj'
+        const username ='usuariioejjjjj'
         const password= '123456!'
         const gender='Male'
         const day='5'
@@ -57,8 +57,3 @@ describe('Torre Critian Apis', () => {
     })
 })
 
-
-
-
-
-    

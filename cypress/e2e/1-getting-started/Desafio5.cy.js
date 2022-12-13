@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
-describe('Torre Critian Api', () => {
+describe('Torre Critian Apist', () => {
 
     
     
     it('Registro ingreso y elimino usuario', () => {
-        const username ='usuariaaoo'
+        const username ='usuariioeyjmmm'
         const password= '123456!'
         const gender='Male'
         const day='5'
@@ -26,24 +26,23 @@ describe('Torre Critian Api', () => {
         }).then( respuesta => {
             expect(respuesta.status).is.equal(200)
             expect(respuesta.body.newUser.username).is.equal(username)
-
+        
         });
+            
+            cy.request({
+                method: "POST",
+                url:  "https://pushing-it.onrender.com/api/login",
+                body:{
+                    username: username,
+                    password: password,
+    
+                }
+     
+            }).then( respuesta => {
+                window.localStorage.setItem('token',respuesta.body.token)
+                window.localStorage.setItem('user',respuesta.body.user.username)
 
- 
-        cy.request({
-            method: "POST",
-            url:  "https://pushing-it.onrender.com/api/login",
-            body:{
-                username: username,
-                password: password,
-
-            }
- 
-        }).then( respuesta => {
-            cy.log(respuesta.body)
-            window.localStorage.setItem('token',respuesta.body.token)
-            window.localStorage.setItem('user',respuesta.body.username)
-
+            })
+            })
         })
-    })
-})
+    
