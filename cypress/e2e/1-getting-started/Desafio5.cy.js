@@ -5,7 +5,7 @@ describe('Torre Critian Apist', () => {
     
     
     it('Registro ingreso y elimino usuario', () => {
-        const username ='usuariioeyjmmm'
+        const username ='usuariioey'
         const password= '123456!'
         const gender='Male'
         const day='5'
@@ -43,6 +43,7 @@ describe('Torre Critian Apist', () => {
                 window.localStorage.setItem('user',respuesta.body.user.username)
 
             })
+        
             })
         })
     
