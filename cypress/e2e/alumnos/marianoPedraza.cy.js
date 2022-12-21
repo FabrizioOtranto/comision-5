@@ -1,4 +1,4 @@
-describe('Desafio4', () => {
+describe('Desafio-4', () => {
 
     it("Deberia registarse, ingresar y luego eliminar el usuario", () => {
         const username = 'mariano' + Math.floor(Math.random() * 1000)
